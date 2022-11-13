@@ -1,9 +1,29 @@
 plugins {
 	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
 apply plugin: 'io.spring.dependency-management'
+
+
+allprojects {
+	buildscript {
+   		repositories {
+   		 mavenCentral()
+        }
+    }
+}
+
+allprojects {
+   repositories {
+       mavenCentral()
+   }
+}
+
+repositories {
+  mavenCentral()
+}
 
 group = 'app'
 version = '0.0.1-SNAPSHOT'
